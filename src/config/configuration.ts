@@ -10,5 +10,11 @@ export default (): Partial<ConfigProps> => {
     enviroment:
       process.env.NODE_ENV === 'development' ? 'development' : 'production',
     port: parseInt(process.env.PORT, 10) || 3000,
+    mongodb: {
+      database: {
+        connectionString: process.env.MONGO_URI,
+        databaseName: 'GRADEGY',
+      },
+    },
   };
 };
