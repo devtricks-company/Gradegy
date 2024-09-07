@@ -14,7 +14,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       load: [configuration],
     }),
 
-    //mongo db connection setup by mongoose
+    //mongo db connection setup by mongoose module
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => {
